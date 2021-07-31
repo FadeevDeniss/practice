@@ -3,3 +3,7 @@
 
 with open('war_and_peace.txt', 'r+t', encoding='utf-8') as f:
     dict_of_nums = {}
+    while True:
+        line = f.readline()
+        if not line:
+            break
