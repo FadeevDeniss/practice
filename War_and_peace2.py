@@ -16,3 +16,9 @@ with open('war_and_peace.txt', 'r+t', encoding='utf-8') as f:
                 dict_of_nums[i] += 1
             else:
                 dict_of_nums[i] = 1
+        for j in range(1, 11, 1):
+            x = max(dict_of_nums, key=lambda k: dict_of_nums[k])
+            print(j, 'место:', 'слово', x, dict_of_nums.get(x), 'раз встречается в тексте')
+            dict_of_nums.pop(x)
+
+
