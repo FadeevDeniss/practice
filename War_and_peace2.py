@@ -10,5 +10,9 @@ with open('war_and_peace.txt', 'r+t', encoding='utf-8') as f:
         for symbol in ['!', '?', '.', ',', '"', ':', ')', '(']:
             line = line.replace(symbol, '')
         for i in line.split():
-            if len(i) < 5:
+            if len(i) <= 5:  # Condition that allows us to pass words, which length are lower or equal 5 symbols
                 continue
+            elif i in dict_of_nums:
+                dict_of_nums[i] += 1
+            else:
+                dict_of_nums[i] = 1
