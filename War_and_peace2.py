@@ -7,3 +7,5 @@ with open('war_and_peace.txt', 'r+t', encoding='utf-8') as f:
         line = f.readline()
         if not line:
             break
+        for symbol in ['!', '?', '.', ',', '"', ':', ')', '(']:
+            line = line.replace(symbol, '')
