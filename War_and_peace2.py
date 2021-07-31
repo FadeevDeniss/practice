@@ -9,3 +9,6 @@ with open('war_and_peace.txt', 'r+t', encoding='utf-8') as f:
             break
         for symbol in ['!', '?', '.', ',', '"', ':', ')', '(']:
             line = line.replace(symbol, '')
+        for i in line.split():
+            if len(i) < 5:
+                continue
